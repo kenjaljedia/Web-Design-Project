@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form</title>
+  <style>
+    body {
+      font-family: 'Caveat', cursive;
+      background: #FFF8F0;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    h2 {
+      text-align: center;
+      font-size: 3em;
+      color: #FF6F91;
+      margin-bottom: 20px;
+    }
+    form {
+      background: #FFD1DC;
+      padding: 30px;
+      border: 2px solid #FFABAB;
+      border-radius: 15px;
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      width: 100%;
+    }
+    label {
+      font-size: 1.2em;
+      color: #333;
+    }
+    input[type="text"], input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0 20px 0;
+      border: 2px solid #FFABAB;
+      border-radius: 10px;
+      background: #FFF8F0;
+      font-size: 1em;
+    }
+    input[type="submit"] {
+      background: #FF6F91;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-size: 1.2em;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      width: 100%;
+    }
+    input[type="submit"]:hover {
+      background: #FFABAB;
+    }
+    form:hover {
+      transform: scale(1.02);
+    }
+  </style>
+</head>
+<body>
+  <h2>Login Form</h2>
+
+  <form id="loginForm" onsubmit="return validateLoginForm()">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" placeholder="Enter your username"><br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" placeholder="Enter your password"><br>
+
+    <input type="submit" value="Login">
+  </form>
+
+  <script>
+    function validateLoginForm() {
+      const username = document.getElementById("username").value.trim();
+      const password = document.getElementById("password").value;
+
+      if (username === "") {
+        alert("Username is required.");
+        return false;
+      }
+
+      if (password === "") {
+        alert("Password is required.");
+        return false;
+      }
+
+      const usernamePattern = /^[a-zA-Z0-9_]{3,15}$/;
+      if (!usernamePattern.test(username)) {
+        alert("Username must be 3-15 characters and contain only letters, numbers, and underscores.");
+        return false;
+      }
+
+      if (password.length < 6) {
+        alert("Password must be at least 6 characters long.");
+        return false;
+      }
+
+      alert("Login successful!");
+      // Redirect to the home page
+      window.location.href = "Web Design event management page.html"; 
+      return false; // Prevent default form submission
+    }
+  </script>
+</body>
+</html>

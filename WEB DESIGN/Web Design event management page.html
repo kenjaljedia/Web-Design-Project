@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vivid Moments</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+            background: #FFF8F0;
+        }
+        header {
+            background: #FFD1DC;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 5px solid #FFABAB;
+        }
+        header h1 {
+            margin: 0;
+            color: #f9f3f4;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #FFABAB;
+            color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            display: block;
+        }
+        nav a:hover {
+            background: #FFD1DC;
+            color: #333;
+            border-radius: 5px;
+        }
+        .hero {
+            background: url('COVER4.jpg') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            background-color: rgba(255, 175, 204, 0.7);
+        }
+        .hero h2 {
+            font-size: 3em;
+            background: rgba(255, 255, 255, 0.6);
+            padding: 10px;
+            border-radius: 10px;
+            color: #FF6F91;
+        }
+        .section {
+            padding: 30px;
+            text-align: center;
+        }
+        .services, .gallery {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .services div {
+            margin: 10px;
+            padding: 20px;
+            background: #FFABAB;
+            border: 2px solid #FFD1DC;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            color: white;
+            max-width: 300px;
+        }
+        .services div h3 {
+            color: #FFF8F0;
+        }
+        .gallery img {
+            margin: 10px;
+            padding: 10px;
+            border: 5px solid #FFABAB;
+            border-radius: 10px;
+            width: 300px;
+            transition: transform 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+        .testimonials {
+            background: #FFD1DC;
+            padding: 30px;
+            border-top: 5px solid #FFABAB;
+        }
+        .testimonial {
+            margin: 10px;
+            padding: 20px;
+            border: 2px solid #FFABAB;
+            border-radius: 10px;
+            background: white;
+            color: #333;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            text-align: center;
+            background: #FF6F91;
+            color: white;
+            padding: 15px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to Our Event Management Services</h1>
+</header>
+
+<nav>
+    <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#contact">Contact</a>
+    <a href="login.html">Login</a>
+</nav>
+
+<div class="hero">
+    <h2>Your Dream Events, Our Expertise</h2>
+</div>
+
+<section id="services" class="section">
+    <h2>Our Services</h2>
+    <div class="services">
+        <div>
+            <h3>Weddings</h3>
+            <p>Elegant and memorable weddings tailored to your dreams.</p>
+        </div>
+        <div>
+            <h3>Corporate Events</h3>
+            <p>Professional and seamless corporate event planning.</p>
+        </div>
+        <div>
+            <h3>Private Parties</h3>
+            <p>Fun and vibrant private parties for any occasion.</p>
+        </div>
+    </div>
+</section>
+
+<section id="gallery" class="section">
+    <h2>Gallery</h2>
+    <div class="gallery">
+        <img src="event4.jpg" alt="Event 1">
+        <img src="event5.jpg" alt="Event 2">
+        <img src="event8.jpg" alt="Event 3">
+        <img src="event7.jpg" alt="Event 4">
+    </div>
+</section>
+
+<section id="testimonials" class="testimonials">
+    <h2>Client Testimonials</h2>
+    <div class="testimonial">
+        <p>"They made our wedding day unforgettable! Highly recommended."</p>
+        <p>- Ishan Sharma</p>
+    </div>
+    <div class="testimonial">
+        <p>"The corporate event was flawless. Our clients were impressed."</p>
+        <p>- Rudraksh Gupta</p>
+    </div>
+</section>
+
+<section id="feedback" class="feedback-section">
+    <h2>Feedback</h2>
+    <form action="#" method="post" class="feedback-form">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="message">Your Feedback:</label>
+        <textarea id="message" name="message" rows="5" placeholder="Write your feedback here..." required></textarea>
+
+        <button type="submit">Submit Feedback</button>
+    </form>
+</section>
+
+<style>
+    .feedback-section {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+    }
+
+    .feedback-form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .feedback-form label {
+        font-weight: bold;
+    }
+
+    .feedback-form input,
+    .feedback-form textarea,
+    .feedback-form button {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .feedback-form button {
+        background-color: #FF6F91;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    .feedback-form button:hover {
+        background-color: #FF6F91;
+    }
+</style>
+
+<section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <p>Email: contact@kenjaljedia.com</p>
+    <p>Phone: +91 8473487338</p>
+</section>
+
+<footer>
+    <p>&copy; Vivid Moments.</p>
+</footer>
+
+</body>
+</html>
